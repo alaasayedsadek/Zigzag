@@ -59,12 +59,12 @@ public class MainMenu implements Variables {
         System.out.println("Instructions button clicked at: " + x + ", " + y);
         
     }
-    
-    
-    if (x >= 25 && x <= 175 && y >= 13 && y <= 170) {
-        System.out.println("Exit button clicked at: " + x + ", " + y);
-        
-    }
+
+
+      if (x >= 171 && x <= 317 && y >= 791 && y <= 877) {
+          System.out.println("Exit button clicked at: " + x + ", " + y);
+          System.exit(0);
+      }
 }
 
 }
