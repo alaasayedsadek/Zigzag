@@ -66,6 +66,18 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
          if (menus.play==true){
              menus.DrawMainMenu(gl);
          }
+         if(menus.key=="instruction") {
+             menus.DrawMainMenu(gl);
+             DrawSprite(gl , 5 , 95 , 7 , 1.0f);
+         }
+        if(menus.key=="BackToHome") {
+            menus.DrawMainMenu(gl);
+            DrawSprite(gl, 10, 70, 1, scale);
+            DrawSprite(gl, 15, 50, 2, scale);
+            DrawSprite(gl, 20, 30, 3, scale);
+            DrawSprite(gl, 25, 13, 4, scale);
+        }
+
     }
 
     public double sqrdDistance(int x, int y, int x1, int y1) {

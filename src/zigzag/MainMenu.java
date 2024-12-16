@@ -11,6 +11,7 @@ import static zigzag.Variables.textures;
 public class MainMenu implements Variables {
     static int Page = 0;
     boolean play = false;
+    static String key ;
     
     static boolean isEasy;
     static boolean isMulti;
@@ -55,15 +56,22 @@ public class MainMenu implements Variables {
     }
     
     
-    if (x >= 20 && x <= 170 && y >= 30 && y <= 180) {
+    if (x >= 123 && x <= 270 && y >= 626 && y <= 715) {
         System.out.println("Instructions button clicked at: " + x + ", " + y);
-        
+        key = "instruction" ;
+        Page=6 ;
     }
 
 
       if (x >= 171 && x <= 317 && y >= 791 && y <= 877) {
           System.out.println("Exit button clicked at: " + x + ", " + y);
           System.exit(0);
+      }
+
+      if ( (x >= 2 && x <= 83 && y >=0 && y <= 63) && Page==6 ) {
+          System.out.println("Back button clicked at: " + x + ", " + y);
+          key="BackToHome" ;
+          Page=0 ;
       }
 }
 
