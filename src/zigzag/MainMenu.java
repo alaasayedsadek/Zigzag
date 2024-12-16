@@ -23,7 +23,7 @@ public class MainMenu implements Variables {
 
     public void DrawMainMenu(GL gl) {
         gl.glEnable(GL.GL_BLEND);
-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[Page]);    
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[Page]);
 
         gl.glPushMatrix();
         gl.glBegin(GL.GL_QUADS);
@@ -41,13 +41,23 @@ public class MainMenu implements Variables {
         gl.glDisable(GL.GL_BLEND);
     }
 
-  public void positions(int x, int y) {
-    
-    if (x >= 26 && x <= 172 && y >= 241 && y <= 331) {
+ public void positions(int x, int y) {
+    // Check for Play button
+    if (x >= 25 && x <= 172 && y >= 241 && y <= 331) {
         System.out.println("Play button clicked at: " + x + ", " + y);
-        play = true;  
-        Page=5 ;
+        Page = 5;
+        play = true;
+        username = JOptionPane.showInputDialog("Enter user name");
+    } 
+    // Check for Easy button
+    else if (x >= 298 && x <= 685 && y >= 310 && y <= 419) {
+        System.out.println("Easy button clicked at: " + x + ", " + y);
+        play = true;
+        isEasy = true;
+        gameMode = 1;
     }
+}
+
     
     
     if (x >= 15 && x <= 165 && y >= 50 && y <= 200) {
