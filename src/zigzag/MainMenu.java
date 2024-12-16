@@ -56,7 +56,7 @@ public class MainMenu implements Variables {
         isEasy = true;
         gameMode = 1;
     }
-}
+
 
     
     
