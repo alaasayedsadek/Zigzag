@@ -56,7 +56,7 @@ public class MainMenu implements Variables {
         isEasy = true;
         gameMode = 1;
     }
-}
+
 
     
     
@@ -82,7 +82,7 @@ public class MainMenu implements Variables {
           System.out.println("Back button clicked at: " + x + ", " + y);
           key="BackToHome" ;
           Page=0 ;
-      }
+      } // fatma
 }
 
 }
