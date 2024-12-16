@@ -9,7 +9,7 @@ import javax.swing.*;
 import static zigzag.Variables.textures;
 
 public class MainMenu implements Variables {
-    static int Page = 1;
+    static int Page = 0;
     boolean play = false;
     
     static boolean isEasy;
@@ -42,10 +42,10 @@ public class MainMenu implements Variables {
 
   public void positions(int x, int y) {
     
-    if (x >= 10 && x <= 160 && y >= 70 && y <= 220) {
+    if (x >= 26 && x <= 172 && y >= 241 && y <= 331) {
         System.out.println("Play button clicked at: " + x + ", " + y);
         play = true;  
-        gameMode = 1; 
+        Page=5 ;
     }
     
     
