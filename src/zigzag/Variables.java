@@ -14,9 +14,20 @@ public interface Variables {
     int maxWidth = 100;
     int maxHeight = 100;
 
-    double x = 50, y = 50;
+double x = 50, y = 50;
 
-    String[] textureNames = {"main.png", "button-play.png", "button-multiplayer.png", "button-instructions.png", "button-Exit.png", "gameBackground.png"};
+String[] textureNames = {
+    "main.png", 
+    "button-play.png", 
+    "button-multiplayer.png", 
+    "button-instructions.png", 
+    "button-Exit.png", 
+    "main.png", 
+    "instruction.png", 
+    "Back.png", 
+    "gameBackground.png"
+};
+
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int[] textures = new int[textureNames.length];
 }
