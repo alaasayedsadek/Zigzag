@@ -27,10 +27,9 @@ public interface Variables {
             "Hard.png",
             "instruction.png",
             "Back.png",
-
-           // "orangeBall.png",
-           // "button.png",
-            "gameBackground.png"
+            "ball.png",
+            "tile.jpeg",
+            "Game.png"
     };
 
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];

@@ -20,25 +20,8 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
 
    MainMenu menus = new MainMenu();
      static SoundPlayer GameSound = new SoundPlayer();
-    static SoundPlayer AccidentSound  = new SoundPlayer();
-  //  Variables v =new ZigzagGLEventListener();
-//    String[] textureNames = {
-//            "main.png",
-//            "button-play.png",
-//            "button-multiplayer.png",
-//            "button-instructions.png",
-//            "button-Exit.png",
-//            "main.png",
-//            "instruction.png",
-//            "Back.png",
-//            "orangeBall.png",
-//            "button.png",
-//            "gameBackground.png"
-//    };
-//
-//    TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
-//    int[] textures = new int[textureNames.length];
-//
+
+
 
     public void init(GLAutoDrawable gld) {
         GL gl = gld.getGL();
@@ -100,10 +83,10 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
          if (menus.play==true){
              menus.DrawMainMenu(gl);
              gl.glPushMatrix();
-             gl.glScaled(0.003,0.003,1);
+             gl.glScaled(0.0025,0.0025,1);
              createMap();
              drawMap(gl);
-             drawBall(gl, xBall, yBall, 50, 50, 5);
+             drawBall(gl, xBall, yBall, 50, 50, 8);
              gl.glPopMatrix();
              if (flag == 1 || flag == 0) {
                  //           score.updateScore((float) speed);
@@ -152,7 +135,7 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
 
 
 
-      //  handleKeyPress();
+//        handleKeyPress();
     }
 
 
@@ -268,7 +251,7 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
 
     public void drawMap(GL gl) {
         for (Tile tile : tiles) {
-            drawTile(gl, tile.x, tile.y, tile.angle, 100, 100, 8);
+            drawTile(gl, tile.x, tile.y, tile.angle, 100, 100, 9);
             if (flag == 1 || flag == 0) {
                 tile.y -= speed;
             }
@@ -310,6 +293,14 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
             xBall += speed;
         } else if (flag == 0) {
             xBall -= speed;
+        }
+        if(xBall>=380){
+            //page=0
+            xBall-=speed;
+        }
+        if(xBall<=-380){
+            xBall+=speed;
+
         }
         gl.glRotated(-45, 0, 0, 1);
         gl.glScaled(width / 2.0, height / 2.0, 1);
