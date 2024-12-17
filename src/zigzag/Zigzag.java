@@ -29,7 +29,7 @@ public class Zigzag extends JFrame {
 
         setTitle("Zigzag");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1000, 600);
+        setSize(1000, 1000);
         setLocationRelativeTo(null);
         setVisible(true);
         setFocusable(true);

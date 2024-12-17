@@ -20,6 +20,8 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
      static SoundPlayer GameSound = new SoundPlayer();
     static SoundPlayer AccidentSound  = new SoundPlayer();
 
+    static boolean flagPause = false;
+
     public void init(GLAutoDrawable gld) {
         GL gl = gld.getGL();
         gl.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
@@ -55,13 +57,35 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
         gl.glClear(GL.GL_COLOR_BUFFER_BIT);
         gl.glLoadIdentity();
 
+
         DrawBackground(gl);
 
-        float scale = 1.5f;     
-        DrawSprite(gl, 10, 70, 1, scale); 
-       DrawSprite(gl, 15, 50, 2, scale);
+        float scale = 1.5f;
+        DrawSprite(gl, 10, 70, 1, scale);
+        DrawSprite(gl, 15, 50, 2, scale);
         DrawSprite(gl, 20, 30, 3, scale);
-         DrawSprite(gl, 25, 13, 4, scale);
+        DrawSprite(gl, 25, 13, 4, scale);
+
+        if(menus.play==true) {
+            menus.DrawMainMenu(gl);
+            DrawSprite(gl, 10, 90, 7, scale);
+            DrawSprite(gl, 50, 60, 8,2.5f );
+            DrawSprite(gl, 50, 40, 9, 2.5f);
+        }
+         if(menus.multiplayer==true) {
+            menus.DrawMainMenu(gl);
+            DrawSprite(gl, 10, 90, 7, scale);
+            DrawSprite(gl, 50, 60, 10,2.5f );
+           DrawSprite(gl, 50, 40, 11, 2.5f);
+        }
+        if(menus.back==true){
+            menus.DrawMainMenu(gl);
+            DrawSprite(gl, 10, 70, 1, scale);
+            DrawSprite(gl, 15, 50, 2, scale);
+            DrawSprite(gl, 20, 30, 3, scale);
+            DrawSprite(gl, 25, 13, 4, scale);
+        }
+
     }
 
     public double sqrdDistance(int x, int y, int x1, int y1) {
