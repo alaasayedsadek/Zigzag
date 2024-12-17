@@ -6,6 +6,8 @@ package zigzag;
 
 import Texture.TextureReader;
 
+import java.util.ArrayList;
+
 /**
  * @author Alaa Sayed
  */
@@ -13,21 +15,25 @@ public interface Variables {
 
     int maxWidth = 100;
     int maxHeight = 100;
+    ArrayList<Tile> tiles = new ArrayList<>();
+    double x = 50, y = 50;
 
-double x = 50, y = 50;
+    String[] textureNames = {
+            "main.png",
+            "button-play.png",
+            "button-multiplayer.png",
+            "button-instructions.png",
+            "button-Exit.png",
+            "Hard.png",
+            "instruction.png",
+            "Back.png",
 
-String[] textureNames = {
-    "main.png", 
-    "button-play.png", 
-    "button-multiplayer.png", 
-    "button-instructions.png", 
-    "button-Exit.png", 
-    "main.png", 
-    "instruction.png", 
-    "Back.png", 
-    "gameBackground.png"
-};
+           // "orangeBall.png",
+           // "button.png",
+            "gameBackground.png"
+    };
 
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int[] textures = new int[textureNames.length];
 }
+

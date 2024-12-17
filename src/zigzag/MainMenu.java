@@ -45,7 +45,7 @@ public class MainMenu implements Variables {
     // Check for Play button
     if (x >= 25 && x <= 172 && y >= 241 && y <= 331) {
         System.out.println("Play button clicked at: " + x + ", " + y);
-        Page = 5;
+        Page = 0;
         play = true;
         username = JOptionPane.showInputDialog("Enter user name");
     } 
