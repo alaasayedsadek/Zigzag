@@ -17,7 +17,7 @@ public interface Variables {
     double x = 50, y = 50;
 
     String[] textureNames = {"main.png", "button-play.png", "button-multiplayer.png", "button-instructions.png", "button-Exit.png", "main.png","instrucure.png","Back.png",
-   "Easy.png","Hard.png" ,"Pc.png","Player2.png"};
+   "Easy.png","Hard.png" ,"Player2.png"};
     TextureReader.Texture [] texture = new TextureReader.Texture[textureNames.length];
     int[] textures = new int[textureNames.length];
 }

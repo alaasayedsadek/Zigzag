@@ -13,7 +13,8 @@ public class MainMenu implements Variables {
     boolean play = false;
     boolean multiplayer = false;
     boolean back = false;
-
+    boolean easy = false;
+    boolean hard = false;
 
     static boolean isEasy;
     static boolean isMulti;
@@ -52,6 +53,20 @@ public class MainMenu implements Variables {
           username = JOptionPane.showInputDialog("Enter user name");
       }
 
+      if ((x >= 171 && x<= 416) && (y >= 305 && y <= 454) )//easy button
+      {
+          Page = 5;
+          play = true;
+          easy=true;
+      }
+
+      if ((x >= 171 && x<= 416) && (y >= 497 && y <= 651) )//easy button
+      {
+          Page = 5;
+          play = true;
+          easy=true;
+      }
+
 
 
     if (x >= 74 && x <= 219 && y >= 439 && y <= 524)//multiplayer button
@@ -61,8 +76,9 @@ public class MainMenu implements Variables {
         
     }
 
-      if (x >= 370 && x <= 612 && y >= 500 && y <= 651)//Vs Player 2 button
+      if (x >= 468 && x <= 712 && y >= 403 && y <= 551)//Vs Player 2 button
       {
+
           username = JOptionPane.showInputDialog("Enter user 1 name");
           username = JOptionPane.showInputDialog("Enter user 2 name");
 

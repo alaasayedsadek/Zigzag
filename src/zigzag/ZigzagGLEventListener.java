@@ -69,14 +69,19 @@ public class ZigzagGLEventListener extends ZigzagListener implements Variables,M
         if(menus.play==true) {
             menus.DrawMainMenu(gl);
             DrawSprite(gl, 10, 90, 7, scale);
-            DrawSprite(gl, 50, 60, 8,2.5f );
-            DrawSprite(gl, 50, 40, 9, 2.5f);
+            DrawSprite(gl, 30, 60, 8,2.5f );
+            DrawSprite(gl, 30, 40, 9, 2.5f);
         }
+
+        if(menus.easy==true|| menus.hard==true) {
+            menus.DrawMainMenu(gl);
+
+        }
+
          if(menus.multiplayer==true) {
             menus.DrawMainMenu(gl);
             DrawSprite(gl, 10, 90, 7, scale);
-            DrawSprite(gl, 50, 60, 10,2.5f );
-           DrawSprite(gl, 50, 40, 11, 2.5f);
+           DrawSprite(gl, 60, 50, 10, 2.5f);
         }
         if(menus.back==true){
             menus.DrawMainMenu(gl);
